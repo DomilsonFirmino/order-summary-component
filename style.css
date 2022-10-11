@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+:root{
+    --clr-p-pale-blue: hsl(225, 100%, 94%);
+    --clr-p-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-n-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-n-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-n-dark-blue: hsl(223, 47%, 23%);
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    --fs-400: 16px;
+
+    --ff-Red: 'Red Hat Display', sans-serif;;
+}
+*,*::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color:var(--clr-p-pale-blue);
+    background-image: url('images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    font-family: var(--ff-Red);
+}
+
+main{
+    text-align: center;
+
+    margin: 1rem 1.5rem;
+    border-radius: 14px;
+    
+    overflow: hidden;
+
+    background-color: #ffffff;
+}
+
+.card__header img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__body{
+    padding: 2rem;
+}
+
+.card__body h1{
+    font-weight: var(--fw-900);
+    font-size: 1.6rem;
+
+    margin-bottom: .5em;
+
+    color: #232f49;
+}
+
+.card__body p{
+    font-size: var(--fs-400);
+    margin-bottom: 2em;
+    color: var(--clr-n-desaturated-blue);
+
+    line-height: 1.5;
+}
+
+.components{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+    padding: .8rem;
+
+    background-color:#f8f9fe;
+
+    border-radius: 14px;
+}
+.components p{
+    font-weight: var(--fw-700);
+
+    color: var(--clr-n-dark-blue);
+    
+    padding-right: .7rem;
+    margin: 0;
+}
+
+.components span{
+    font-weight: var(--fw-500);
+    color: #7b8299;
+}
+.components a{
+
+    font-weight: 500;
+    color: #382ae1;
+}
+.one, .two{
+    width: 100%;
+    display: block;
+
+    padding: 1em .8em;
+    border: none;
+
+    font-size: var(--fs-400);
+    font-weight:var(--fw-900);
+
+    border-radius: 14px;
+
+}
+
+.one{
+    margin-bottom: 1rem;
+
+    background-color: #382ae1;
+    color: #ffffff;
+
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.two{
+    background-color: Transparent;
+    color: #7b8299;
+}
+@media only screen and (min-width: 475px){
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-content: center;
+
+
+        background-image: url('images/pattern-background-desktop.svg');
+        background-size: contain;
+    }
+    main{
+        width: 25em;
+    }
+    .components a:hover{
+        text-decoration: none;
+        color: #857bd9;
+    }
+    .one, .two{
+        cursor: pointer;
+    }
+    .one:hover{
+        background-color: #766cf1;
+    }
+    .two:hover{
+        color: hsl(231, 14%, 19%);
+    }
+}
